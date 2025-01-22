@@ -11,7 +11,6 @@ class LQRModel(nn.Module):
             nn.Linear(hidden_state_dim, hidden_state_dim),
             nn.ReLU(),
             nn.Linear(hidden_state_dim, hidden_state_dim),
-            nn.ReLU()
         )
 
         self.action_encoder = nn.Sequential(
@@ -20,7 +19,6 @@ class LQRModel(nn.Module):
             nn.Linear(hidden_action_dim, hidden_action_dim),
             nn.ReLU(),
             nn.Linear(hidden_action_dim, hidden_action_dim),
-            nn.ReLU()
         )
 
         self.state_decoder = nn.Sequential(
